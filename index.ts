@@ -27,13 +27,8 @@ trie.insert('kevin');
 trie.insert('kyle');
 trie.insert('linkedin');
 
-
 trie.remove('linkedin');
 
-console.log(trie.startsWith('jes'));
-console.log(trie.search('kyle'));
-console.log(trie.search('jdsada'));
-
-// Remove not working
-// @TODO: Fix this
+console.log(trie.startsWith('j'));
+console.log(trie.startsWith('ap'));
 console.log(trie.search('linkedin'));

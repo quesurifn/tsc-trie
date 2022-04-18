@@ -41,10 +41,15 @@ class Trie {
                 return false;
             }
 
+           // console.log(current.char)
+
             // Set the new current node to be the child with the current character
             current = current.getChild(word[c]);
         }
 
+       // console.log(current.char)
+
+  
         // Return is a word; This guards against returning early 
         // if it's only a valid prefix but not a whole word;
         return current.isEndOfWord;
@@ -64,7 +69,6 @@ class Trie {
             }
         }
         
-
         // We need to descend the tree to the end of the word
         // and then return the words that are at the end of the tree
         // We can use dfs on each child to do this;
@@ -94,10 +98,9 @@ class Trie {
 
     remove(word: string) {
         let current = this.root;
-
         // Loop through characters of word we're searching for
-        for (let c = 0; c < word.length; c++) {
-
+        // If we don't put eq than if won't be full length of word
+        for (let c = 0; c <= word.length; c++) {
             // Check to see if this node is the end of a word
             // And if the word matches the node's word
             if(current.isEndOfWord && word === current.getWord()) {
