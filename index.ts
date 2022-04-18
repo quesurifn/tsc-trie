@@ -32,3 +32,8 @@ trie.remove('linkedin');
 
 console.log(trie.startsWith('jes'));
 console.log(trie.search('kyle'));
+console.log(trie.search('jdsada'));
+
+// Remove not working
+// Fix
+console.log(trie.search('linkedin'));
