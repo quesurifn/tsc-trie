@@ -1,3 +1,4 @@
+import esserializer from 'esserializer';
 import TrieNode from './TrieNode'
 
 class Trie {
@@ -129,7 +130,9 @@ class Trie {
 
 
     print() {
-
-    }
+        console.log(esserializer.serialize(this.root));
+    }   
 }
+
+export default Trie;
 
